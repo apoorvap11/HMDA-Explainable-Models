@@ -1,36 +1,87 @@
 # HMDA-Explainable-Models
 
-HMDA Explainable Models – Responsible Machine Learning (GWU)
 
-This repository contains my implementation of Assignment 1 for the GWU Responsible Machine Learning course.  
-The project trains and evaluates multiple **explainable machine learning models** on the HMDA mortgage dataset.
+# HMDA Explainable Machine Learning Models  
+### Responsible & Interpretable ML • Model Explainability • Bias Detection
+
+This project demonstrates my ability to build **explainable, responsible machine learning models** using the Home Mortgage Disclosure Act (HMDA) dataset. The focus is on creating **transparent, interpretable models** that can be validated, monitored, and audited — skills that are increasingly required for data science, analytics, and ML roles.
+
+This repository was originally part of a graduate-level project at The George Washington University, and has been refined and published to my GitHub portfolio to showcase my work.
 
 ---
 
-## 📂 Project Structure
+##  Key Skills Demonstrated
 
----
-
-## 📊 Models Trained
-The assignment requires at least two explainable models. I included:
-
+- **Explainable Machine Learning (XAI)**
+- **Responsible & Fair ML Practices**
+- **Model validation, early stopping & reproducibility**
+- **Hyperparameter tuning & cross-validation**
+- **XGBoost (monotonic constraints)**
+- **Explainable Boosting Machines (EBM)**
 - **Elastic Net Logistic Regression (h2o)**
-- **Explainable Boosting Machine (EBM, interpret)**
-- **Monotonic Gradient Boosting Machine (XGBoost)**
-
-Each model outputs a CSV with **one column named `phat`**, representing the predicted probability that a mortgage is *high-priced*.
+- **Feature understanding & exploration**
+- **Probability scoring for production ML workflows**
+- **End-to-end ML pipeline: data → model → evaluation → scoring**
 
 ---
 
-## ▶️ How to Run the Notebook
+##  Project Overview
 
-1. Download the provided HMDA data:
-   - `hmda_train_preprocessed.zip`
-   - `hmda_test_preprocessed.zip`
+Mortgage pricing decisions in the U.S. have long been tied to fairness and regulatory scrutiny.  
+In this project, I:
 
-2. Place them in the `data/` folder.
+1. **Trained multiple explainable ML models**  
+2. **Compared model performance & interpretability**
+3. **Generated probability scores (`phat`) for unseen test data**
+4. Focused on transparency over black-box performance
 
-3. Install dependencies:
+The target variable is **whether a mortgage is considered high-priced**, a key financial and fairness outcome for borrowers.
 
-   ```bash
-   pip install -r requirements.txt
+---
+
+##  Tools & Technologies
+
+- **Python**
+- **h2o**
+- **XGBoost**
+- **InterpretML (EBM)**
+- **Pandas, NumPy**
+- **Jupyter Notebook**
+
+---
+
+##  Repository Structure
+
+---
+
+##  Models Trained
+
+### **1. Elastic Net Logistic Regression (h2o)**
+- Fully interpretable coefficients  
+- Strong baseline model  
+
+### **2. Explainable Boosting Machine (EBM)**
+- Highly transparent additive model  
+- Handles nonlinearities while staying interpretable  
+
+### **3. Monotonic Gradient Boosting (XGBoost)**
+- Ensures monotonicity on key features  
+- More flexible while still constrained for explainability  
+
+All models produce a `phat` score — the predicted probability that a loan is high-priced.
+
+---
+
+## How to Run
+
+1. Install dependencies:
+
+```bash
+jupyter notebook hmda_explainable_models.ipynb
+
+pip install -r requirements.txt
+
+
+
+
+
