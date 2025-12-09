@@ -1,6 +1,3 @@
-# HMDA-Explainable-Models
-
-
 # HMDA Explainable Machine Learning Models  
 ### Responsible & Interpretable ML • Model Explainability • Bias Detection
 
